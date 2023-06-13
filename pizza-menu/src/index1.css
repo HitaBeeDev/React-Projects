@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Gelasio&display=swap");
+
+:root {
+  --backgroundColor: #e3d5ca;
+  --headerColor: #606c38;
+  --textColor: #283618;
+  --borderColor: #d5bdaf;
+  --color1: #edede9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Gelasio", sans-serif;
+  color: var(--textColor);
+  background-color: var(--backgroundColor);
+  border-bottom: 1.6rem solid var(--borderColor);
+  min-height: 100vh;
+  padding: 3.2rem;
+  padding-bottom: 6rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.header {
+  align-self: stretch;
+}
+
+.header__title {
+  color: var(--headerColor);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 8px;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.header__title::before,
+.header__title::after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 9rem;
+  background-color: var(--color1);
+  position: absolute;
+  top: calc(50% - 1px);
+}
+
+.header__title::before {
+  left: 0;
+}
+
+.header__title::after {
+  right: 0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.menu__title {
+  display: inline-block;
+  padding: 1rem 0;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.pizza {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.pizza__image {
+  width: 12rem;
+  aspect-ratio: 1;
+  align-self: start;
+}
+
+.pizza__description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 0.4rem 0;
+}
+
+.pizza__name {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.pizza__ingredients {
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: auto;
+}
+
+.pizza__price {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.footer {
+  font-size: 1.4rem;
+}
