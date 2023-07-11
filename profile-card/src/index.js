@@ -3,6 +3,14 @@ import ReactDom from "react-dom/client";
 import "./index.css";
 import { findRenderedComponentWithType } from "react-dom/test-utils";
 
+const skills = [
+  { skill: "#HTML, CSS", color: "#00f5d4" },
+  { skill: "#JavaScript", color: "#c196f6" },
+  { skill: "#Web Design", color: "#00bbf9" },
+  { skill: "#Git and Github", color: "#f15bb5" },
+  { skill: "#React", color: "#fee440" },
+];
+
 const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -35,17 +43,21 @@ function ProfileDetails() {
         and cross-browser compatibility. Passionate about staying updated with
         emerging technologies.
       </p>
-      <div className="skills">
-        <Skills name="#HTML+CSS" color="html" />
-        <Skills name="#JavaScript" color="javascript" />
-        <Skills name="#Web Design" color="web-design" />
-        <Skills name="#Git and Github" color="git" />
-        <Skills name="#React" color="react" />
+      <div className="skills__list">
+        {/* {listOfskills.map(skills) => (<Skills skillsObj={skills} key={skill.skillName} />)} */}
+
+        {skills.map((skill) => (
+          <Skills skill={skill.skill} color={skill.color} />
+        ))}
       </div>
     </div>
   );
 }
 
-function Skills(props) {
-  return <h2 className={props.color}>{props.name}</h2>;
+function Skills({ skill, color }) {
+  return (
+    <div style={{ backgroundColor: color }}>
+      <h2 className="skills">{skill}</h2>
+    </div>
+  );
 }
