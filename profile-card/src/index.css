@@ -21,8 +21,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 35rem;
-  height: 56rem;
+  width: 40rem;
+  height: 58rem;
   box-shadow: 0px 0px 8px 8px #e5e5e5;
   border-radius: 2rem;
   color: #14213d;
@@ -31,7 +31,7 @@ body {
 .image {
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
-  max-width: 35rem;
+  max-width: 40rem;
   max-height: 30rem;
 }
 
@@ -51,7 +51,7 @@ body {
   line-height: 1.5;
 }
 
-.skills {
+.skills__list {
   font-size: 0.7rem;
   display: flex;
   flex-direction: row;
@@ -61,36 +61,11 @@ body {
   font-size: 0.7rem;
 }
 
-.html,
-.javascript,
-.web-design,
-.git,
-.react {
-  border-radius: 0.5rem;
-  height: 2rem;
-  font-size: 1rem;
-  width: 9rem;
+.skills {
+  height: 2.2rem;
+  font-size: 1.1rem;
+  width: 11rem;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.html {
-  background-color: #00f5d4;
-}
-
-.javascript {
-  background-color: #c196f6;
-}
-
-.web-design {
-  background-color: #00bbf9;
-}
-
-.git {
-  background-color: #f15bb5;
-}
-
-.react {
-  background-color: #fee440;
 }
